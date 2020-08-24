@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  // font-size: 14px;
+  // font-family: "Roboto-Regular", sans-serif;
+  scroll-behavior: smooth;
+  max-width: 1920px;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+ul, li{
+list-style: none;
+}
+button:focus,
+input:focus {
+  outline: transparent;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container__fluid {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
