@@ -13,10 +13,10 @@ body {
   height: 100%;
   position: relative;
   overflow-x: hidden;
-  // font-size: 14px;
-  // font-family: "Roboto-Regular", sans-serif;
+  font-family: "Montserrat-Medium",sans-serif;;
+  font-size: 20px;
   scroll-behavior: smooth;
-  max-width: 1920px;
+  // max-width: 1920px;
 }
 
 ul,
@@ -52,15 +52,14 @@ body {
 .footer {
   flex: 0 0 auto;
 }
-//
+//закончили прижимать footer к дну страницы
 
 a {
-  text-decoration: none;
+  text-decoration: transparent;
   color: inherit;
- 
-  &:hover {
+    &:hover {
     text-decoration: underline;
-
+    transition: all .4s ease-out;
       }
 }
 ul,

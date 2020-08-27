@@ -4,13 +4,44 @@
 @import "global";
 
 // header start
-.header{
-&__btn-login{
-  background:#e6e6e6;
-}
-&__btn-start{
-  background:$blue; 
-}
+.header {
+  font-size: 18px;
+
+  // height: 100%;
+  &__container {
+    @extend .container;
+    max-width: 1590px;
+    display: grid;
+    grid-template: 100% / 51% 1fr 111px 124px;
+    align-items: center;
+    min-height: 130px;
+  }
+  &__logo {
+    font-family: "Poppins-Regular", sans-serif;
+  }
+  &__navigation {
+  }
+  &__navigation-inner {
+    display: grid;
+    grid-template: 100% / 33.33% 33.33% 33.33%;
+    align-items: center;
+  }
+  &__navigation-item {
+    display: inline;
+  }
+  &__btn-login {
+    background: #e6e6e6;
+    padding: 10px 15px;
+    width: 82px;
+    height: 40px;
+  }
+  &__btn-start {
+    background: $blue;
+    color: #fff;
+    padding: 10px 15px;
+    width: 124px;
+    height: 40px;
+  }
 }
 // header end
 
@@ -35,6 +66,37 @@
 }
 
 // banner start
+.banner {
+  position: relative;
+  &__image {
+    position: relative;
+    object-fit: contain;
+  }
+  &__grid {
+    position: absolute;
+    top: 0;
+  }
+  &__content-wrap {
+    max-width: 795px;
+    width: 100%;
+    position: absolute;
+    top: 130px;
+    background-color: #fff;
+    padding: 100px 120px 120px 120px;
+  }
+  &__content-title {
+    font-size: 75px;
+    line-height: 80px;
+    font-family: "PlayfairDisplay-Bold", sans-serif;
+    span {
+      color: $blue;
+    }
+  }
+  &__content-text {
+  }
+  &__content-more {
+  }
+}
 // banner end
 
 // technology start
