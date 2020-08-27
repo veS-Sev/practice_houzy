@@ -32,8 +32,11 @@ $(function(){
     }
   });
   
-  $("#rateYo").rateYo({
-    starWidth: "40px"
+  $(".rating").rateYo({
+      rating: 5,
+    starWidth: "12px",
+    ratedFill: '#ffa726',
+    readOnly: true,
   }); 
 
 });

@@ -3,8 +3,90 @@
 @import "fonts";
 @import "global";
 
+// header start
+.header{
+&__btn-login{
+  background:#e6e6e6;
+}
+&__btn-start{
+  background:$blue; 
+}
+}
+// header end
 
+// title for sections
+.technology__title-wrap,
+.service__title-wrap,
+.reviewing__title-wrap,
+.howItWork__title-wrap {
+  @include title-wrap;
+}
+.technology__title-decoration,
+.service__title-decoration,
+.reviewing__title-decoration,
+.howItWork__title-decoration {
+  @include title-decoration;
+}
+.technology__title,
+.service__title,
+.reviewing__title,
+.howItWork__title {
+  @include title;
+}
 
+// banner start
+// banner end
 
+// technology start
+// technology  end
+
+// service start
+
+// service end
+
+// reviewing start
+// reviewing end
+
+// howItWork start
+// howItWork end
+
+// footer start
+// footer end
+
+// modal start
+#modal {
+  display: none;
+}
+// modal end
+
+// .title-decoration {
+//   display:grid;
+//   grid-template: 6px 1fr 6px/6px 1fr 6px;
+//   width: 38px;
+//   height: 30px;
+//   justify-items: center;
+//   align-items: center;
+//   position:absolute;
+//   left:0;
+//   & span{
+//   background:$blue;
+//   @include dots;
+//   }
+// }
+// .service__title .span{
+//   position:relative;
+// &::before{
+//   content:'';
+//   background: url('../img/dot-blue.jpg') left bottom repeat-x;
+//   position:absolute;
+
+//   height: 30px;
+//   width: 38px;
+// color:#18dadc;
+// turquoise
+// border:6px dotted #18dadc;
+// border-style: dotted 6px;
+// }
+// }
 
 @import "media";
