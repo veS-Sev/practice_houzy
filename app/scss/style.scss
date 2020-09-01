@@ -7,7 +7,6 @@
 .header {
   font-size: 18px;
 
-  // height: 100%;
   &__container {
     @extend .container;
     max-width: 1590px;
@@ -18,6 +17,22 @@
   }
   &__logo {
     font-family: "Poppins-Regular", sans-serif;
+    font-size: 40px;
+    line-height: 72px;
+    span {
+      color: $blue;
+      position: relative;
+    }
+    span::before {
+      background-color: $blue;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translate(20%, -28%);
+      position: absolute;
+      content: "";
+    }
   }
   &__navigation {
   }
@@ -31,15 +46,17 @@
   }
   &__btn-login {
     background: #e6e6e6;
-    padding: 10px 15px;
-    width: 82px;
+    text-align: center;
+    padding: 10px;
+    width: 81px;
     height: 40px;
   }
   &__btn-start {
     background: $blue;
     color: #fff;
-    padding: 10px 15px;
-    width: 124px;
+    text-align: center;
+    padding: 10px;
+    width: 125px;
     height: 40px;
   }
 }
@@ -71,12 +88,65 @@
   &__image {
     position: relative;
     object-fit: contain;
+    max-height: 950px;
+    height: 100%;
+    z-index:0;
   }
   &__grid {
+    display:grid;
+   height: 100%;
+    // max-height: 950px;
+    max-width: 1920px;
+    width: 100%;
     position: absolute;
+    z-index:1;
     top: 0;
+    grid-gap: 10px;
+  // background-color:#fff;
+  grid-template: 21% 5% 24% 18% 31%/ 21%  12% 5% 6% 19% 18% 16%;
   }
+  &__grid-cell{
+    background-color:transparent;
+  }
+  &__grid-cell:hover {
+    background-color: #fff;
+  }
+  .cell-1 {
+    grid-area: 1/1/3/1;
+  }
+  .cell-2 {
+    grid-area: 1/2/1/4;
+  }
+  .cell-3 {
+    grid-area: 1/4/1/6;
+  }
+  .cell-4 {
+  }
+  .cell-5 {
+  }
+  .cell-6 {
+    grid-area: 3/1/5/2;
+  }
+  .cell-7 {
+    grid-area: 2/2/4/5;
+  }
+  .cell-8 {
+    grid-area: 2/5/4/5;
+  }
+  .cell-9 {
+    grid-area: 4/2/5/6;
+  }
+  .cell-10 {
+    grid-area: 5/1/5/3;
+  }
+  .cell-11 {
+    grid-area: 5/3/5/6;
+  }
+
   &__content-wrap {
+
+    display:none;
+
     max-width: 795px;
     width: 100%;
     position: absolute;

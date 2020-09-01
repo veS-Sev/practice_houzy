@@ -32,7 +32,7 @@ $(function(){
     }
   });
   
-  $(".rating").rateYo({
+  $(".rating-stars").rateYo({
       rating: 5,
     starWidth: "12px",
     ratedFill: '#ffa726',
