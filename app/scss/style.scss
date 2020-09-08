@@ -85,6 +85,7 @@
 // banner start
 .banner {
   position: relative;
+  margin-bottom: 150px;
   &__image {
     position: relative;
     object-fit: cover;
@@ -193,21 +194,310 @@
     font-family: "Montserrat-SemiBold", sans-serif;
     max-width: 203px;
     width: 100%;
-    padding: 15px;
-    text-align: center;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
   }
 }
 // banner end
 
 // technology start
+
+.technology {
+  margin-bottom: 140px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  &__inner::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $lblue;
+    bottom: -90px;
+    left: -100px;
+  }
+  &__map {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    min-height: 650px;
+    background-image: url("../img/technology-img.jpg");
+    background-repeat: no-repeat;
+    background-size: 82% 100%;
+  }
+  &__map-item-1 {
+    @include map-number;
+    bottom: 12%;
+    right: 55%;
+  }
+  &__map-item-2 {
+    @include map-number;
+    bottom: 39%;
+    left: 10%;
+  }
+  &__map-item-3 {
+    @include map-number;
+    bottom: 57%;
+    right: 25%;
+  }
+  &__person {
+    max-width: 305px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-family: "Montserrat-Regular", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: right;
+    box-shadow: 10px 17.321px 60px 0px rgba(0, 0, 0, 0.08);
+  }
+  &__person-1 {
+    @extend .technology__person;
+  }
+  &__person-2 {
+    @extend .technology__person;
+    top: 75%;
+    right: 0%;
+  }
+  &__person-text {
+    padding: 10px 0 10px 0px;
+    margin-right: 20px;
+    max-height: 80px;
+    overflow: hidden;
+  }
+  &__person-name {
+    color: $gray;
+  }
+  &__person-image {
+    @include avatar;
+  }
+  &__content {
+    margin-top: 70px;
+  }
+  &__title-wrap {
+  }
+  &__title-decoration {
+  }
+  &__title {
+    @include title;
+  }
+  &__text {
+    max-width: 490px;
+    width: 100%;
+    max-height: 205px;
+    overflow: hidden;
+    line-height: 30px;
+    margin: 25px 0 40px 60px;
+  }
+  &__list {
+    font-size: 24px;
+    margin-left: 60px;
+  }
+  &__list-item {
+    padding-left: 65px;
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  &__list-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/technology-check-img.png");
+    background-repeat: no-repeat;
+  }
+}
 // technology  end
 
 // service start
-
+.service {
+  &__title-wrap {
+    margin: 0 auto;
+    max-width: 760px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  &__title-decoration {
+    margin-top: 20px;
+    margin-left: 20px;
+    align-self: stretch;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__inner {
+    margin-bottom: 150px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    z-index: 20;
+  }
+  &__inner::after {
+    width: 600px;
+    height: 600px;
+    @include position;
+    background-color: $lblue;
+    border-radius: 50%;
+    right: -120px;
+    z-index: 0;
+    top: 30%;
+  }
+  &__inner-logo {
+    @extend .header__logo;
+    color: $lgray;
+    position:absolute;
+    top:50%;
+    left:15%;
+    span {
+      color: $lgray;
+    }
+    span::before {
+      background-color: $lgray;
+    }
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+     }
+  &__tab {
+    width: 105px;
+    height: 105px;
+    background-color: $blue;
+    border-radius: 50%;
+    @include bg;
+  }
+  #tab-1 {
+    background-image: url("../img/service/furniture-icon.svg");
+  }
+  #tab-2 {
+    background-image: url("../img/service/fixup-icon.svg");
+    align-self: flex-end;
+  }
+  #tab-3 {
+    background-image: url("../img/service/garden-icon.svg");
+    
+  }
+  #tab-4 {
+    background-image: url("../img/service/cleaning-icon.svg");
+  }
+  &__tabcontent {
+    max-width: 435px;
+    width: 100%;
+    min-height: 490px;
+    box-shadow: 10px 17.321px 60px 0px rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 30;
+  }
+  // &__tabcontent::before{
+  //   width: 600px;
+  //   height: 600px;
+  //   @include position;
+  //   background-color: $lblue;
+  //   border-radius:50%;
+  //   z-index:1;
+  //   top:50%;
+  // }
+  &__tabcontent-image {
+    width: inherit;
+    height: 245px;
+  }
+  &__tabcontent-box {
+    padding: 30px 0 0 45px;
+    background-color: #fff;
+  }
+  &__tabcontent-title {
+    font-size: 26px;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    max-width: 330px;
+    width: 100%;
+    padding: 15px 0px 10px 60px;
+    position: relative;
+    margin-bottom: 25px;
+  }
+  &__tabcontent-title::before {
+    @include position;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/service/cleaning-icon.svg);
+    left: 10px;
+    bottom: 5px;
+  }
+  &__tabcontent-text {
+    line-height: 30px;
+    padding-right: 55px;
+    margin-bottom: 50px;
+  }
+  &__tabcontent-btn {
+    width: 80px;
+    height: 40px;
+    display: block;
+    background-color: black;
+    margin-left: calc(100% - 80px);
+    background-image: url("../img/service/arrow-icon.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+  }
+}
 // service end
 
 // reviewing start
+
+.reviewing {
+  &__inner {
+  }
+  &__content {
+  }
+  &__title-wrap {
+  }
+  &__title-decoration {
+  }
+  &__title {
+  }
+  &__text {
+  }
+  &__btn {
+  }
+  &__map {
+  }
+  &__inner-img {
+    width: 380px;
+    height: 450px;
+  }
+  &__person {
+  }
+  &__person-box {
+  }
+  &__person-price {
+  }
+  &__person-name {
+  }
+  &__person-prof {
+  }
+  &__person-rating {
+  }
+  .rating-stars {
+  }
+  &__person-image {
+    @include avatar;
+  }
+}
+
 // reviewing end
 
 // howItWork start

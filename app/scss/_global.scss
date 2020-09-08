@@ -72,7 +72,7 @@ input:focus {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1230px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -81,4 +81,10 @@ input:focus {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
+}
+.show{
+  display:block;
+}
+.hide{
+  display:none;
 }
