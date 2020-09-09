@@ -19,11 +19,11 @@
     font-family: "Poppins-Regular", sans-serif;
     font-size: 40px;
     line-height: 72px;
-    span {
+    .logo-cirle {
       color: $blue;
       position: relative;
     }
-    span::before {
+    .logo-cirle::before {
       background-color: $blue;
       height: 20px;
       width: 20px;
@@ -357,13 +357,13 @@
   &__inner-logo {
     @extend .header__logo;
     color: $lgray;
-    position:absolute;
-    top:50%;
-    left:15%;
-    span {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    .logo-cirle  {
       color: $lgray;
     }
-    span::before {
+    .logo-cirle ::before {
       background-color: $lgray;
     }
   }
@@ -371,7 +371,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-     }
+  }
   &__tab {
     width: 105px;
     height: 105px;
@@ -388,7 +388,6 @@
   }
   #tab-3 {
     background-image: url("../img/service/garden-icon.svg");
-    
   }
   #tab-4 {
     background-image: url("../img/service/cleaning-icon.svg");
@@ -459,35 +458,109 @@
 // reviewing start
 
 .reviewing {
+  background-color: #f8f8f8;
   &__inner {
+    display: flex;
+    padding: 100px 0;
   }
   &__content {
+    max-width: 710px;
+    width: 100%;
   }
   &__title-wrap {
+    @extend .service__title-wrap;
+    margin-top: 60px;
+    margin-bottom: 30px;
   }
   &__title-decoration {
+    @extend .service__title-decoration;
+    margin-left: 0px;
   }
   &__title {
+    @extend .header__logo;
   }
   &__text {
+    margin-bottom: 30px;
+    max-width: 610px;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 10px;
+    line-height: 30px;
+    font-size: 18px;
   }
   &__btn {
+    background-color: $blue;
+    color: #fff;
+    margin-left: 60px;
+    max-width: 205px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 20px;
+    padding: 15px 10px;
   }
   &__map {
+    position: relative;
+    padding-right: 110px;
+    min-height: 450px;
   }
   &__inner-img {
     width: 380px;
     height: 450px;
   }
   &__person {
+    display: flex;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+   }
+  &__person::before {
+    @include position;
+    left: -60px;
+    top: -60px;
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid transparent;
+    border-top: 60px solid rgba($blue, 0.5);
+    border-right: 60px solid rgba($blue, 0.5);
+    border-left: 60px solid rgba($blue, 0.5);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    transform: rotate(-45deg);
+  }
+  &__person-1 {
+    @extend .reviewing__person;
+    right: 0;
+    top: 90px;
+  }
+  &__person-2 {
+    @extend .reviewing__person;
+    right: 0;
+    bottom:60px;
   }
   &__person-box {
+    display: grid;
+    max-width: 200px;
+    width: 200px;
+    grid-template: 33.3% 33.3% 33.3% / 50% 50%;
+    text-align: right;
+    font-size: 18px;
+    margin-right: 20px;
   }
   &__person-price {
+    grid-area: 1/1/4/2;
+    font-size: 35px;
+    align-self: center;
+    text-align: left;
   }
   &__person-name {
   }
   &__person-prof {
+    color: $gray;
   }
   &__person-rating {
   }
@@ -501,6 +574,42 @@
 // reviewing end
 
 // howItWork start
+.howItWork {
+  padding-top:150px;
+  padding-bottom:150px;
+}
+.container {
+}
+.howItWork__inner {
+}
+.howItWork__title-wrap {
+
+}
+.howItWork__title-decoration {
+}
+.howItWork__title {
+  
+  font-family: "Poppins-Regular", sans-serif;
+}
+span.title-logo{
+  color:black;
+  @extend .header__logo;
+}
+.howItWork__items {
+  display:flex;
+}
+.howItWork__item {
+}
+.howItWork__item-number {
+}
+.howItWork__item-box {
+}
+.howItWork__item-icon {
+}
+.howItWork__item-text {
+}
+.howItWork__btn {
+}
 // howItWork end
 
 // footer start
