@@ -57,7 +57,8 @@ gulp.task('script', function () {
 
 gulp.task('js', function () {
   return gulp.src([
-    'node_modules/rateyo/src/jquery.rateyo.js'
+    'node_modules/rateyo/src/jquery.rateyo.js',
+    'node_modules/animejs/lib/anime.js'
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

@@ -1,6 +1,6 @@
 $(function(){
 
-  //TABS
+  // TABS
   let tab = document.querySelectorAll('.service__tab'),
     tabs = document.querySelector('.service__tabs'),
     tabContent = document.querySelectorAll('.service__tabcontent');
@@ -38,6 +38,9 @@ $(function(){
     ratedFill: '#ffa726',
     readOnly: true,
   }); 
+
+  const anime = require('animejs');
+
 
 });
 
