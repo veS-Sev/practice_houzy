@@ -3,7 +3,6 @@
 @import "fonts";
 @import "global";
 
-
 // header start
 .header {
   font-size: 18px;
@@ -67,19 +66,19 @@
 .technology__title-wrap,
 .service__title-wrap,
 .reviewing__title-wrap,
-.howItWork__title-wrap {
+.work__title-wrap {
   @include title-wrap;
 }
 .technology__title-decoration,
 .service__title-decoration,
 .reviewing__title-decoration,
-.howItWork__title-decoration {
+.work__title-decoration {
   @include title-decoration;
 }
 .technology__title,
 .service__title,
 .reviewing__title,
-.howItWork__title {
+.work__title {
   @include title;
 }
 
@@ -170,8 +169,17 @@
     padding: 100px 120px 120px 120px;
     z-index: 2;
     max-height: 673px;
-    right: 180px; // 9%
+    right: 180px;
     box-shadow: 10px 17.321px 60px 0px rgba(0, 0, 0, 0.08);
+  }
+  &__content-wrap::after{
+    @include position;
+    width: 370px;
+    height: 370px;
+    background-image:url('../img/banner/cube-line.svg');
+    top:-80px;
+    right:-80px;
+
   }
   &__content-title {
     font-size: 75px;
@@ -284,10 +292,6 @@
   &__content {
     margin-top: 70px;
   }
-  &__title-wrap {
-  }
-  &__title-decoration {
-  }
   &__title {
     @include title;
   }
@@ -323,6 +327,7 @@
 
 // service start
 .service {
+  padding-bottom: 150px;
   &__title-wrap {
     margin: 0 auto;
     max-width: 760px;
@@ -340,10 +345,9 @@
   }
   &__inner {
     margin-bottom: 150px;
-    display: flex;
-    justify-content: space-around;
     position: relative;
     z-index: 20;
+    padding-top: 110px;
   }
   &__inner::after {
     width: 600px;
@@ -355,23 +359,20 @@
     z-index: 0;
     top: 30%;
   }
-  &__inner-logo {
-    @extend .header__logo;
-    color: $lgray;
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    .logo-cirle {
-      color: $lgray;
-    }
-    .logo-cirle::before {
-      background-color: $lgray;
-    }
-  }
   &__tabs {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  &__bgr {
+    z-index: 21;
+    position: relative;
+    margin-left: 110px;
+  }
+  text.service__bgr-logo-text {
+    fill: $lgray;
+    fill-opacity: 0.7;
+    font-size: 40px;
   }
   &__tab {
     width: 105px;
@@ -379,42 +380,41 @@
     background-color: $blue;
     border-radius: 50%;
     @include bg;
+    position: absolute;
+    z-index: 22;
   }
   #tab-1 {
-    background-image: url("../img/service/furniture-icon.svg");
-    
+    background-image: url("../img/service/garden-icon.svg");
+    top: 55px;
+    left: 25%;
+    background-position: right bottom;
   }
   #tab-2 {
-    background-image: url("../img/service/fixup-icon.svg");
-    align-self: flex-end;
-    
+    background-image: url("../img/service/furniture-icon.svg");
+    top: 47%;
+    left: 55px;
   }
   #tab-3 {
-    background-image: url("../img/service/garden-icon.svg");
-    background-position:right bottom;
+    background-image: url("../img/service/fixup-icon.svg");
+    bottom: -45px;
+    left: 25%;
   }
   #tab-4 {
     background-image: url("../img/service/cleaning-icon.svg");
+    top: 55px;
+    left: 25%;
   }
   &__tabcontent {
     max-width: 435px;
     width: 100%;
-    min-height: 490px;
+    height: 490px;
     box-shadow: 10px 17.321px 60px 0px rgba(0, 0, 0, 0.08);
-    margin-top: 60px;
-    margin-bottom: 60px;
-    position: relative;
+    left: 45%;
+    top: 110px;
+    bottom: 0;
+    position: absolute;
     z-index: 30;
   }
-  // &__tabcontent::before{
-  //   width: 600px;
-  //   height: 600px;
-  //   @include position;
-  //   background-color: $lblue;
-  //   border-radius:50%;
-  //   z-index:1;
-  //   top:50%;
-  // }
   &__tabcontent-image {
     width: inherit;
     height: 245px;
@@ -422,22 +422,27 @@
   &__tabcontent-box {
     padding: 30px 0 0 45px;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   &__tabcontent-title {
     font-size: 26px;
     font-family: "Montserrat-SemiBold", sans-serif;
-    max-width: 330px;
+    max-width: 335px;
+    overflow: hidden;
     width: 100%;
-    padding: 15px 0px 10px 60px;
+    padding-left: 60px;
     position: relative;
     margin-bottom: 25px;
+    height: 55px;
   }
   &__tabcontent-title::before {
     @include position;
     width: 50px;
     height: 50px;
     background-image: url(../img/service/cleaning-icon.svg);
-    left: 10px;
+    left: 0;
     bottom: 5px;
   }
   &__tabcontent-text {
@@ -450,7 +455,7 @@
     height: 40px;
     display: block;
     background-color: black;
-    margin-left: calc(100% - 80px);
+    margin-left: auto;
     background-image: url("../img/service/arrow-icon.png");
     background-repeat: no-repeat;
     background-size: auto;
@@ -561,14 +566,8 @@
     align-self: center;
     text-align: left;
   }
-  &__person-name {
-  }
   &__person-prof {
     color: $gray;
-  }
-  &__person-rating {
-  }
-  .rating-stars {
   }
   &__person-image {
     @include avatar;
@@ -577,23 +576,18 @@
 
 // reviewing end
 
-// howItWork start
-.howItWork {
+// work start
+.work {
   padding-top: 150px;
   padding-bottom: 150px;
-}
-.container {
-}
-.howItWork__inner {
-}
-.howItWork__title-wrap {
+
+&__title-wrap {
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 100px;
 }
-.howItWork__title-decoration {
-}
-.howItWork__title {
+
+&__title {
   font-family: "Poppins-Regular", sans-serif;
 }
 span.title-logo {
@@ -601,19 +595,19 @@ span.title-logo {
   @extend .header__logo;
   font-size: 50px;
 }
-.howItWork__items {
+&__items {
   display: flex;
   justify-content: space-between;
   margin-bottom: 80px;
 }
-.howItWork__item {
+&__item {
   max-width: 368px;
   width: 100%;
   text-align: center;
   position: relative;
   padding-top: 90px;
 }
-.howItWork__item-number {
+&__item-number {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -629,33 +623,33 @@ span.title-logo {
   align-items: center;
   justify-content: center;
 }
-#howItWork__curve-2,
-#howItWork__curve-1{
-@include position;
-top:0;
-left:240px;
+#work__curve-2,
+#work__curve-1 {
+  @include position;
+  top: 0;
+  left: 240px;
 }
-.howItWork__item-box {
+&__item-box {
   background-color: #f8f8f8;
   width: 100%;
   min-height: 290px;
   padding: 80px 40px 10px 40px;
 }
-.howItWork__item-box:hover,
-.howItWork__item-box:focus {
+&__item-box:hover,
+&__item-box:focus {
   box-shadow: 10px 17.321px 60px 0px rgba(0, 0, 0, 0.08);
 }
-.howItWork__item-icon {
+&__item-icon {
   width: 58px;
   height: 58px;
   margin-bottom: 40px;
 }
-.howItWork__item-text {
+&__item-text {
   font-family: "Montserrat-Regular", sans-serif;
   line-height: 30px;
   font-size: 18px;
 }
-.howItWork__btn {
+&__btn {
   color: #fff;
   height: 50px;
   max-width: 205px;
@@ -667,109 +661,106 @@ left:240px;
   background-color: $blue;
   font-family: "Montserrat-SemiBold", sans-serif;
 }
-// howItWork end
+}
+// work end
 
 // footer start
 .footer {
-  background-color:#000;
-  .container__fluid {
-  }
-  .container {
-  }
+  background-color: #000;
   .footer__inner {
-       padding:80px 0;
-       display:grid;
-       grid-template:100% /22% 19% 24% 42%;
-
-   
+    padding: 80px 0;
+    display: grid;
+    grid-template: 100% /22% 19% 24% 42%;
   }
   .footer__column {
-    display:flex;
+    display: flex;
   }
-  .footer__column-wrap{
+  .footer__column-wrap {
     width: 100%;
   }
   .footer__logo {
-  @extend .service__inner-logo;
- position:sticky;
- color:#fff;
- margin:0;
- padding:0;
- line-height: 30px;
- top:0;
- left:0;
+    @extend .header__logo;
+    // position: sticky;
+    color: $lgray;
+    line-height: 30px;
+    span.logo-cirle {
+      color: $lgray;
+    }
+    span.logo-cirle::before {
+      background-color: $lgray;
+    }
   }
+
   .footer__title {
-    color:#fff;
-    font-family: "Montserrat-SemiBold",sans-serif;
+    color: #fff;
+    font-family: "Montserrat-SemiBold", sans-serif;
     font-size: 20px;
     vertical-align: bottom;
     line-height: 50px;
   }
   .footer__list {
-    color:#939393;
-    font-family: "Montserrat-Regular",sans-serif;
+    color: #939393;
+    font-family: "Montserrat-Regular", sans-serif;
     font-size: 18px;
     margin-top: 30px;
     line-height: 50px;
   }
-  .footer__list-item {
-  }
   .footer__list-item-link:hover,
-  .footer__list-item-link:focus{
-    color:#fff;
+  .footer__list-item-link:focus {
+    color: #fff;
   }
   .footer__email-form {
     max-width: 410px;
-    display:flex;
-    width:100%;
+    display: flex;
+    width: 100%;
     margin-top: 17px;
-  margin-bottom: 40px;
-    input{
-      padding-left:25px;
-      padding-right:10px;
-      height:50px;
+    margin-bottom: 40px;
+    input {
+      padding-left: 25px;
+      padding-right: 10px;
+      height: 50px;
       max-width: 250px;
-      width:100%;
+      width: 100%;
     }
   }
   .footer__email-form-btn {
-    margin-left:-5px;
-  border:$blue;
-    height:50px;
-    max-width:160px;
-    width:100%;
-    display:flex;
-    align-items:center;
+    margin-left: -5px;
+    border: $blue;
+    height: 50px;
+    max-width: 160px;
+    width: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    color:#fff;
-    background-color:$blue;
+    color: #fff;
+    background-color: $blue;
   }
+
   .footer__list-social {
+    margin-top: 20px;
+    li {
+      width: 20px;
+      display: inline-block;
+      & + li {
+        margin-left: 15px;
+      }
+    }
   }
-  .footer__list-social-item {
+  .footer__list-social a {
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/footer/css_sprites.png);
+    font-size: 0;
+    display: block;
   }
-  .footer__list-social-link {
+  a.facebook {
+    background-position: -20px -20px;
   }
-  .twitter {
+  a.instagram {
+    background-position: -70px -20px;
   }
-  .instagram {
-  }
-  .facebook {
-  }
-  .footer__copy {
-  }
-  .login__title {
-  }
-  .login__wrapper {
-  }
-  .login__label-name {
-  }
-  .login__label-pass {
-  }
-  .creat-acc {
-  }
-  .lost-pass {
+  a.twitter {
+    background-position: -130px -20px;
   }
 }
 // footer end

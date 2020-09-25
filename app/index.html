@@ -31,7 +31,7 @@
 
       <section class="banner">
         <div class="container__fluid">
-          <img src="img/banner-img-3.jpg" alt="#" class="banner__image">
+          <img src="img/banner/banner-img-1.jpg" alt="#" class="banner__image">
           <div class="banner__grid">
             <div class="banner__grid-cell cell-1"></div>
             <div class="banner__grid-cell cell-2"></div>
@@ -74,14 +74,14 @@
                     class="technology__person-name">Marie</div>
                 </div>
 
-                <img src="img/technology-person-img-1.jpg" alt="" class="technology__person-image">
+                <img src="img/technology/technology-person-img-1.jpg" alt="" class="technology__person-image">
               </div>
               <div class="technology__person-2">
                 <div class="technology__person-text">Sure, I’m on my way. <div class="technology__person-name">Pool
                     cleaner</div>
                 </div>
 
-                <img src="img/technology-person-img-2.jpg" alt="" class="technology__person-image">
+                <img src="img/technology/technology-person-img-2.jpg" alt="" class="technology__person-image">
               </div>
             </div>
             <div class="technology__content">
@@ -131,23 +131,32 @@
               in one platform</h2>
           </div>
           <div class="service__inner">
-            <div class="service__inner-logo">H<span class="logo-cirle">o</span>uzy</div>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="490"
+              height="490" class="service__bgr">
+              <circle cx="240" cy="240" r="240" fill="none" stroke="#e6e6e6" stroke-width="5" stroke-dasharray="0.15 26"
+                stroke-linecap='round' class="service__bgr-circle" />
+              <g id="service__bgr-logo"><text x="38%" y="50%" font-family="Poppins-Regular"
+                  class="service__bgr-logo-text">Houzy </text>
+                <circle cx="46%" cy="48%" r="10" fill="#e6e6e6" stroke="#e6e6e6" class="service__bgr-logo-circle" />
+              </g>
+            </svg>
             <div class="service__tabs">
               <div class="service__tab" id="tab-1"></div>
               <div class="service__tab" id="tab-2"></div>
               <div class="service__tab" id="tab-3"></div>
               <div class="service__tab hide" id="tab-4"></div>
             </div>
-            <div class="service__tabcontent">
-              <img src="img/service/service-img-1.jpg" alt="" class="service__tabcontent-image">
+            <div class="service__tabcontent hide">
+              <img src="img/service/service-img-2.jpg" alt="" class="service__tabcontent-image">
               <div class="service__tabcontent-box">
-                <div class="service__tabcontent-title">Taking care of furniture</div>
+                <div class="service__tabcontent-title">Garden work</div>
                 <div class="service__tabcontent-text">Relax, we’ll do the rest. You can have your cleaning service done.
                 </div>
-                <a class="service__tabcontent-btn" href='#'>
-                </a>
+                <a class="service__tabcontent-btn" href='#'></a>
               </div>
             </div>
+
+
             <div class="service__tabcontent">
               <img src="img/service/service-img-1.jpg" alt="" class="service__tabcontent-image">
               <div class="service__tabcontent-box">
@@ -160,15 +169,14 @@
             <div class="service__tabcontent">
               <img src="img/service/service-img-1.jpg" alt="" class="service__tabcontent-image">
               <div class="service__tabcontent-box">
-                <div class="service__tabcontent-title">Garden work</div>
+                <div class="service__tabcontent-title">Taking care of furniture</div>
                 <div class="service__tabcontent-text">Relax, we’ll do the rest. You can have your cleaning service done.
                 </div>
-                <a class="service__tabcontent-btn" href='#'></a>
+                <a class="service__tabcontent-btn" href='#'>
+                </a>
               </div>
             </div>
-
-
-            <div class="service__tabcontent">
+            <div class="service__tabcontent show">
               <img src="img/service/service-img-1.jpg" alt="" class="service__tabcontent-image">
               <div class="service__tabcontent-box">
                 <div class="service__tabcontent-title">Cleaning Service</div>
@@ -205,7 +213,7 @@
               <a href="#" class="reviewing__btn">See Our Reviews</a>
             </div>
             <div class="reviewing__map">
-              <img src="img/reviewing-img.jpg" alt="#" class="reviewing__inner-img">
+              <img src="img/reviewing/reviewing-img.jpg" alt="#" class="reviewing__inner-img">
               <div class="reviewing__person-1">
                 <div class="reviewing__person-box">
                   <div class="reviewing__person-price">$85</div>
@@ -213,7 +221,7 @@
                   <div class="reviewing__person-prof">Maid</div>
                   <div class="reviewing__person-rating rating-stars"></div>
                 </div>
-                <img src="img/reviewing-person-img-1.jpg" alt="" class="reviewing__person-image">
+                <img src="img/reviewing/reviewing-person-img-1.jpg" alt="" class="reviewing__person-image">
               </div>
               <div class="reviewing__person-2">
                 <div class="reviewing__person-box">
@@ -222,7 +230,7 @@
                   <div class="reviewing__person-prof">Lawncare</div>
                   <div class="reviewing__person-rating rating-stars"></div>
                 </div>
-                <img src="img/reviewing-person-img-2.jpg" alt="" class="reviewing__person-image">
+                <img src="img/reviewing/reviewing-person-img-2.jpg" alt="" class="reviewing__person-image">
               </div>
             </div>
           </div>
@@ -231,11 +239,11 @@
       <div class="container__fluid">
         <img src="img/banner-middle.jpg" alt="" class="banner-middle">
       </div>
-      <section class="howItWork">
+      <section class="work">
         <div class="container">
-          <div class="howItWork__inner">
-            <div class="howItWork__title-wrap">
-              <div class="howItWork__title-decoration">
+          <div class="work__inner">
+            <div class="work__title-wrap">
+              <div class="work__title-decoration">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -246,50 +254,52 @@
                 <span></span>
                 <span></span>
               </div>
-              <h2 class="howItWork__title">How <span class="title-logo">H<span class="logo-cirle">o</span>uzy</span>
+              <h2 class="work__title">How <span class="title-logo">H<span class="logo-cirle">o</span>uzy</span>
                 works</h2>
             </div>
-            <div class="howItWork__items">
-              <div class="howItWork__item">
-                <div class="howItWork__item-number">1</div>
-                <svg id="howItWork__curve-1" viewBox="0 0 315 40"  xmlns="http://www.w3.org/2000/svg" width = "315px" height= '50px'>
+            <div class="work__items">
+              <div class="work__item">
+                <div class="work__item-number">1</div>
+                <svg id="work__curve-1" viewBox="0 0 315 40" xmlns="http://www.w3.org/2000/svg" width="315px"
+                  height='50px'>
                   <g>
-                   <path d="M5,40 C70,-15 235,-15 315,40" 
-                         fill="none" stroke="#18dadc" stroke-width="5" stroke-dasharray="0.15 26" stroke-linecap='round'/>
-                    
+                    <path d="M5,40 C70,-15 235,-15 315,40" fill="none" stroke="#18dadc" stroke-width="5"
+                      stroke-dasharray="0.15 26" stroke-linecap='round' />
+
                   </g>
                 </svg>
-                <div class="howItWork__item-box">
-                  <img src='img/howItWork/users-icon.png' class="howItWork__item-icon">
-                  <div class="howItWork__item-text">Tell us a few details about
+                <div class="work__item-box">
+                  <img src='img/work/users-icon.png' class="work__item-icon">
+                  <div class="work__item-text">Tell us a few details about
                     your needs.</div>
                 </div>
               </div>
-              <div class="howItWork__item">
-                <div class="howItWork__item-number">2</div>
-                <svg id="howItWork__curve-2" viewBox="0 0 315 40"  xmlns="http://www.w3.org/2000/svg" width = "315px" height= '50px'>
+              <div class="work__item">
+                <div class="work__item-number">2</div>
+                <svg id="work__curve-2" viewBox="0 0 315 40" xmlns="http://www.w3.org/2000/svg" width="315px"
+                  height='50px'>
                   <g>
-                   <path d="M5,40 C70,-15 235,-15 315,40" 
-                         fill="none" stroke="#18dadc" stroke-width="5" stroke-dasharray="0.15 26" stroke-linecap='round'/>
-                    
+                    <path d="M5,40 C70,-15 235,-15 315,40" fill="none" stroke="#18dadc" stroke-width="5"
+                      stroke-dasharray="0.15 26" stroke-linecap='round' />
+
                   </g>
                 </svg>
-                <div class="howItWork__item-box">
-                  <img src='img/howItWork/pay-icon.png' class="howItWork__item-icon">
-                  <div class="howItWork__item-text">We´ll send your deposit and
+                <div class="work__item-box">
+                  <img src='img/work/pay-icon.png' class="work__item-icon">
+                  <div class="work__item-text">We´ll send your deposit and
                     make sure the service is done.</div>
                 </div>
               </div>
-              <div class="howItWork__item">
-                <div class="howItWork__item-number">3</div>
-                <div class="howItWork__item-box">
-                  <img src='img/howItWork/relax-icon.png' class="howItWork__item-icon">
-                  <div class="howItWork__item-text">Enjoy your free time,
+              <div class="work__item">
+                <div class="work__item-number">3</div>
+                <div class="work__item-box">
+                  <img src='img/work/relax-icon.png' class="work__item-icon">
+                  <div class="work__item-text">Enjoy your free time,
                     we´ll take care of it.</div>
                 </div>
               </div>
             </div>
-            <a href="#" class="howItWork__btn">Start Today</a>
+            <a href="#" class="work__btn">Start Today</a>
           </div>
         </div>
       </section>
@@ -334,10 +344,12 @@
 
                 <h5 class="footer__title">Stay connected with us:</h5>
                 <ul class="footer__list-social">
-                  <li class="footer__list-social-item"><a href="#" class="footer__list-social-link twitter"></a></li>
-                  <li class="footer__list-social-item"><a href="#" class="footer__list-social-link instagram"></a>
+                  <li class="footer__list-social-item"><a href="#" class="footer__list-social-link twitter">twitter</a>
+                  <li class="footer__list-social-item"><a href="#"
+                      class="footer__list-social-link instagram">instagram</a></li>
+                  <li class="footer__list-social-item"><a href="#"
+                      class="footer__list-social-link facebook">facebook</a></li>
                   </li>
-                  <li class="footer__list-social-item"><a href="#" class="footer__list-social-link facebook"></a></li>
                 </ul>
               </div>
             </div>
