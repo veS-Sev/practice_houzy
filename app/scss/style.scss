@@ -5,7 +5,12 @@
 
 // header start
 .header {
+  position: fixed;
+  top:0;
+  z-index:999;
+  width:100%;
   font-size: 18px;
+ 
 
   &__container {
     @extend .container;
@@ -14,6 +19,7 @@
     grid-template: 100% / 51% 1fr 111px 124px;
     align-items: center;
     min-height: 130px;
+    background-color:#fff;
   }
   &__logo {
     font-family: "Poppins-Regular", sans-serif;
@@ -34,12 +40,23 @@
       content: "";
     }
   }
-  &__navigation {
+  &__navigation-btn{
+    display:none;
   }
+  &__navigation-btn-line{
+     width: 40px;
+    height: 3px;
+    background-color:$blue;
+  border:1px solid rgba($blue, 0.5);
+  }
+    &__navigation-btn-line + &__navigation-btn-line{
+      margin-top:7px;
+    }
+  
   &__navigation-inner {
     display: grid;
     grid-template: 100% / 33.33% 33.33% 33.33%;
-    align-items: center;
+    // align-items: center;
   }
   &__navigation-item {
     display: inline;
@@ -86,6 +103,7 @@
 .banner {
   position: relative;
   margin-bottom: 150px;
+  margin-top:130px;
   &__image {
     position: relative;
     object-fit: cover;
@@ -235,7 +253,7 @@
     max-width: 600px;
     width: 100%;
     min-height: 650px;
-    background-image: url("../img/technology-img.jpg");
+    background-image: url("../img/technology/technology-img.jpg");
     background-repeat: no-repeat;
     background-size: 82% 100%;
   }
@@ -319,7 +337,7 @@
     left: 0;
     width: 30px;
     height: 30px;
-    background-image: url("../img/technology-check-img.png");
+    background-image: url("../img/technology/technology-check-img.png");
     background-repeat: no-repeat;
   }
 }
