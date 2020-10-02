@@ -81,6 +81,8 @@ $(function () {
     newLogin.appendChild(btnLogin);
     newStart.appendChild(btnStart);
 
+    btnLogin.style.display = "block";
+    btnStart.style.display = "block";
     // newNavItems[3].appendChild(btnLogin);
     // newNavItems[4].appendChild(btnStart);
 
