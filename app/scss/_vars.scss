@@ -14,6 +14,25 @@ $lgray:#e6e6e6;
   line-height: 60px;
   font-family: "PlayfairDisplay-Bold",sans-serif;
   padding-left:60px;
+  @media(max-width: 1150px){
+  font-size: 46px;
+}
+@media(max-width: 850px){
+  font-size: 42px;
+  line-height: 52px;
+}
+@media(max-width: 700px){
+  font-size: 38px;
+  line-height: 48px;
+}
+@media(max-width: 500px){
+  font-size: 34px;
+  line-height: 44px;
+}
+@media(max-width: 400px){
+  font-size: 32px;
+  line-height: 42px;
+}
    span {
     color: $blue;
   }
@@ -27,7 +46,7 @@ $lgray:#e6e6e6;
   align-items: center;
   margin-right: 17px;
   position: absolute;
- 
+  
    & span {
     background: $blue;
     @include dots;
@@ -72,5 +91,23 @@ $lgray:#e6e6e6;
   padding-bottom:150px;
   @media (max-width: 1300px) {
   padding-bottom:100px;
+}
+@media (max-width: 1150px) {
+  padding-bottom:70px;
+}
+@media (max-width: 700px) {
+  padding-bottom:40px;
+}
+}
+@mixin mb{
+  margin-bottom:140px;
+  @media (max-width: 1300px) {
+  margin-bottom:100px;
+}
+@media (max-width: 1150px) {
+  margin-bottom:70px;
+}
+@media (max-width: 700px) {
+  margin-bottom:40px;
 }
 }
