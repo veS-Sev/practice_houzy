@@ -24,7 +24,7 @@ $(function () {
   showTabContent(0);
 
   tabs.addEventListener('click', function (e) {
-    let target = event.target;
+    let target = e.target;
     if (target && target.classList.contains('service__tab')) {
       for (let i = 0; i < tab.length; i++) {
         if (target == tab[i]) {
@@ -65,31 +65,25 @@ $(function () {
       newNavItems = document.querySelectorAll('.header__navigation-item'),
       btnLogin = document.querySelector('.header__btn-login'),
       btnStart = document.querySelector('.header__btn-start');
-    // newNavItem = document.createElement('li');
     if (newNavItems.length <= 3) {
       for (i = 0; i < 2; i++) {
         let newNavItem = document.createElement('li');
         newNavItem.classList.add('header__navigation-item');
         mediaNav.appendChild(newNavItem);
       }
-    }else{};
+    } else {};
     let newLogin = document.querySelectorAll('.header__navigation-item')[3],
-    newStart = document.querySelectorAll('.header__navigation-item')[4];
-    console.log(newLogin);
-    console.log(newStart);
+      newStart = document.querySelectorAll('.header__navigation-item')[4];
 
     newLogin.appendChild(btnLogin);
     newStart.appendChild(btnStart);
 
     btnLogin.style.display = "block";
     btnStart.style.display = "block";
-    // newNavItems[3].appendChild(btnLogin);
-    // newNavItems[4].appendChild(btnStart);
-
-
   });
-
-  // const anime = require('animejs');
-
+       // const anime = require('animejs');
+  if (document.documentElement.clientWidth < 1101) {
+    tabHide.classList.remove('hide');
+  }
 
 });

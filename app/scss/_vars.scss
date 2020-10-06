@@ -87,6 +87,10 @@ $lgray:#e6e6e6;
   background-position:center;
   background-size:auto;
 }
+@mixin height{
+  max-height: 950px;
+    min-height:450px;
+}
 @mixin pb{
   padding-bottom:150px;
   @media (max-width: 1300px) {
