@@ -6,7 +6,7 @@
     font-size: 55px;
     line-height: 60px;
   }
-  .service__inner{
+  .service__inner {
     @include mb;
   }
   .service__inner::after {
@@ -25,7 +25,24 @@
   .header__container {
     grid-template: 100%/ 25% 1fr 111px 124px;
   }
+  // .reviewing__title {
+  //      .logo-cirle::before{
+  //     height: 25px;
+  //     width:18px;
+  //     top:35px;
+  //   }
+  // }
 }
+@media (max-width: 1200px) {
+  .work {
+    #work__curve-1,
+    #work__curve-2 {
+      top: calc(-8%);
+      left: calc(55% + 1vmin);
+    }
+  }
+}
+
 @media (max-width: 1150px) {
   .technology {
     .container {
@@ -78,10 +95,10 @@
   }
   .service__inner {
     max-height: 490px;
-    max-width:100%;
-    width:100%;
+    max-width: 100%;
+    width: 100%;
     padding-top: 0;
-    display:flex;
+    display: flex;
     justify-content: space-around;
 
     svg {
@@ -100,14 +117,59 @@
     position: relative;
     top: auto;
     left: auto;
-    bottom:auto;
+    bottom: auto;
   }
 
   .service__inner::after {
-     right: 0;
+    right: 0;
   }
-  .service__tabcontent-title{
+  .service__tabcontent-title {
     font-size: calc(100% + 4px);
+  }
+  .reviewing__inner {
+    flex-wrap: wrap;
+    padding: 0 0 40px 0;
+    justify-content: center;
+  }
+  .reviewing__content,
+  .reviewing__text {
+    max-width: 100%;
+  }
+  .reviewing__btn {
+    margin-left: auto;
+  }
+  .reviewing__map {
+    margin-top: 40px;
+  }
+  .reviewing__person-price {
+    font-size: calc(100% + 10px);
+  }
+  .work {
+    .container {
+      padding: 0;
+    }
+  }
+  .work__title-wrap{
+    @include mb;
+    padding:0px 20px;
+     }
+     .work__title{
+       line-height: 32px;
+      
+     }
+
+}
+@media (max-width: 1024px) {
+  .banner-middle {
+    display: none;
+  }
+  .work {
+    #work__curve-1,
+    #work__curve-2 {
+      top: calc(-7%);
+      left: calc(50% + 1vmin);
+      width: calc(100% - 1vw);
+    }
   }
 }
 @media (max-width: 900px) {
@@ -164,9 +226,12 @@
     margin-bottom: 20px;
     line-height: calc(100% + 5px);
   }
+  .service__title-decoration {
+    margin-top: 10px;
+  }
 }
 @media (max-width: 750px) {
-  .service__tabs{
+  .service__tabs {
     margin-left: 5%;
   }
 }
@@ -196,28 +261,69 @@
     margin-left: 10px;
     max-width: calc(100% - 20px);
   }
-  .service{
-    .container{
-      padding:0;
+  .service {
+    padding-bottom: 0px;
+    .container {
+      padding: 0;
     }
   }
-  .service__inner{
+  .service__inner {
     flex-direction: column;
-    max-height:100%;
+    max-height: 100%;
+    margin-bottom: 0px;
   }
-  .service__inner::after{
-    display:none;
+  .service__inner::after {
+    display: none;
   }
-  .service__tabs{
-    flex-direction:row;
-    margin-left:0;
+  .service__tabs {
+    flex-direction: row;
+    margin-left: 0;
     justify-content: space-around;
-    margin-bottom:40px;
+    margin-bottom: 40px;
   }
-  .service__tabcontent{
-    max-width: 100%;;
+  .service__tabcontent {
+    max-width: 100%;
+    box-shadow: none;
+  }
+  .reviewing {
+    .container {
+      padding: 0;
+    }
+  }
+  .reviewing__map {
+    @include w100;
+  }
+  .reviewing__inner-img {
+    @include w100;
+  }
+  .reviewing__content {
+    padding: 0 10px;
+  }
+  .reviewing__text {
+    padding-left: 20px;
+  }
+  .reviewing__title-wrap,
+  .work__title-wrap {
+    text-align: center;
+  }
+  .reviewing__title-decoration,
+  .work__title-decoration {
+     left: 7%;
+  }
+   .work__items{
+    flex-wrap:wrap;
+  }
+  .work__item{
+    @include w100;
+  }
+  .work {
+    #work__curve-1,
+    #work__curve-2 {
+     display:none;
+    }
   }
 }
+
 @media (max-width: 500px) {
   .banner__content-wrap {
     background-color: rgba(#fff, 0.9);
@@ -242,24 +348,36 @@
   .technology__list-item {
     padding-left: 35px;
   }
-  .service{
+  .service {
     padding-bottom: 0;
   }
-  .service__inner{
+  .service__inner {
     margin-bottom: 0;
   }
-  .service__tab{
+  .service__tab {
     width: 17vmin;
     height: 17vmin;
   }
-   .service__tabcontent-text{
-    padding-right:15px;
+  .service__tabcontent-text {
+    padding-right: 15px;
+  }
+  .reviewing__inner {
+    padding: 0;
+  }
+  .reviewing__map {
+    padding: 0;
   }
 }
 @media (max-width: 400px) {
-.service__tabcontent-box{
-  padding-left:30px;
+  .service__tabcontent-box {
+    padding-left: 30px;
+  }
 }
+@media (max-width: 400px) {
+  .reviewing__person-1::before,
+  .reviewing__person-2::before {
+    display: none;
+  }
 }
 // @media (min-width: 901px) {
 //   .header__navigation-inner {

@@ -103,6 +103,18 @@ $lgray:#e6e6e6;
   padding-bottom:40px;
 }
 }
+@mixin pt{
+  padding-top:150px;
+  @media (max-width: 1300px) {
+  padding-top:100px;
+}
+@media (max-width: 1150px) {
+  padding-top:70px;
+}
+@media (max-width: 700px) {
+  padding-top:40px;
+}
+}
 @mixin mb{
   margin-bottom:140px;
   @media (max-width: 1300px) {
@@ -114,4 +126,8 @@ $lgray:#e6e6e6;
 @media (max-width: 700px) {
   margin-bottom:40px;
 }
+}
+@mixin w100{
+  max-width: 100%;
+  width:100%;
 }
