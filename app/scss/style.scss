@@ -461,7 +461,7 @@
     @include position;
     width: 50px;
     height: 50px;
-    background-image: url(../img/service/cleaning-icon.svg);
+    background-image: url("../img/service/cleaning-icon.svg");
     left: 0;
     bottom: 5px;
   }
@@ -509,10 +509,11 @@
   }
   &__title {
     @extend .header__logo;
-    // .logo-cirle::before{
-    //   height: 25px;
-    //   width:18px;
-    // }
+    .logo-cirle::before{
+      top:36px;
+      height: 24px;
+      width:18px;
+    }
   }
   &__text {
     margin-bottom: 30px;
@@ -601,14 +602,14 @@
 }
 
 // reviewing end
-.banner-middle{
-  display:block;
+.banner-middle {
+  display: block;
   @include w100;
   object-fit: cover;
 }
 // work start
 .work {
-@include pt;
+  @include pt;
   @include pb;
 
   &__title-wrap {
@@ -619,11 +620,15 @@
 
   &__title {
     font-family: "Poppins-Regular", sans-serif;
-   }
+  }
   span.title-logo {
     color: black;
     @extend .header__logo;
     font-size: inherit;
+    .logo-cirle::before{
+      left:2px;
+      top:35px;
+    }
   }
   &__items {
     display: flex;
@@ -645,7 +650,7 @@
     border-radius: 50%;
     color: #fff;
     font-family: "Montserrat-Regular", sans-serif;
-    font-size: 32px;
+    font-size: calc(100% + 12px);
     line-height: 50px;
     top: 20px;
     left: calc((100% - 100px) / 2);
@@ -678,7 +683,7 @@
     font-family: "Montserrat-Regular", sans-serif;
     line-height: 30px;
     font-size: 18px;
-    max-height:90px;
+    max-height: 90px;
     overflow: hidden;
   }
   &__btn {
@@ -700,7 +705,7 @@
 .footer {
   background-color: #000;
   .footer__inner {
-    padding: 80px 0;
+    margin: 80px 0;
     display: grid;
     grid-template: 100% /22% 19% 24% 42%;
   }
@@ -726,7 +731,7 @@
   .footer__title {
     color: #fff;
     font-family: "Montserrat-SemiBold", sans-serif;
-    font-size: 20px;
+    font-size: inherit;
     vertical-align: bottom;
     line-height: 50px;
   }
