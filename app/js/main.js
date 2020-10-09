@@ -1,14 +1,19 @@
 $(function () {
 
+  
+
   // TABS
   let tab = document.querySelectorAll('.service__tab'),
     tabs = document.querySelector('.service__tabs'),
     tabContent = document.querySelectorAll('.service__tabcontent'),
-    // для замены табов
     tabActive = document.getElementById('tab-1'),
     tabHide = document.getElementById('tab-4');
-  // 
 
+  // чтобы отображалась 4-я кнопка при небольшой ширине экрана
+  if (document.documentElement.clientWidth < 1101) {
+    tabHide.classList.remove('hide-tab','hide');
+  };
+  // 
   function hideTabContent(a) {
     for (let i = a; i < tabContent.length; i++) {
       tabContent[i].classList.remove('show');
@@ -35,12 +40,14 @@ $(function () {
       }
     }
 
-    //код для замены табов
+    //код для замены табов 1-го на 4-й
+    if (document.documentElement.clientWidth > 1101) {
+    
     tabActive.addEventListener('click', function () {
       tabActive.classList.remove('show');
       tabActive.classList.add('hide');
       tabHide.classList.add('show');
-      tabHide.classList.remove('hide');
+      tabHide.classList.remove('hide','hide-tab');
     });
 
     tabHide.addEventListener('click', function () {
@@ -49,6 +56,7 @@ $(function () {
       tabActive.classList.remove('hide');
       tabActive.classList.add('show');
     });
+  }
     // 
   });
   $(".rating-stars").rateYo({
@@ -58,6 +66,8 @@ $(function () {
     readOnly: true,
   });
 
+
+  // burger-menu
   $('.header__navigation-btn').on('click', function () {
     $('.header__navigation-inner').slideToggle();
 
@@ -81,9 +91,5 @@ $(function () {
     btnLogin.style.display = "block";
     btnStart.style.display = "block";
   });
-       // const anime = require('animejs');
-  if (document.documentElement.clientWidth < 1101) {
-    tabHide.classList.remove('hide');
-  }
-
+  
 });
