@@ -800,10 +800,91 @@
 // footer end
 
 // modal start
-#modal {
+#login {
   display: none;
+  position: absolute;
+  background-color: rgba($gray, 0.7);
+  top: 0;
+  max-width: 100vw;
+  height: 100vh;
+  width: 1005;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  // display:flex;
+}
+.popup {
+  position: absolute;
+  background-color: #fff;
+  top: 20%;
+  height: 40%;
+  max-width: 50%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 15% 0;
+}
+.popup-close {
+  display: inline-block;
+  width: 40px;
+  margin-left: calc(100% - 40px);
+  font-size: calc(100% + 20px);
+  color: $gray;
+}
+.popup-title {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: calc(100% + 20px);
+  line-height: calc(100% + 20px);
+  text-align: center;
+}
+.login__wrapper{
+  margin-top:50px;
+}
+.main-form{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+ }
+.creat-acc:hover,
+.creat-acc:focus,
+.lost-pass:hover,
+.lost-pass:focus{
+  box-shadow: 0 0 10px #a0a0a0;
+}
+.popup-form__btn{
+  margin: 25px 0;
+}
+.overlay {
+  @extend #login;
+}
+.fade {
+  z-index: 999;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.more-splash {
+  animation-name: splash;
+  animation-duration: 1.3s;
+}
+
+@keyframes splash {
+  from {
+    box-shadow: 0 0 10px #a0a0a0;
+  }
+  to {
+    box-shadow: 0 0 60px #a0a0a0;
+  }
 }
 // modal end
-
 
 @import "media";

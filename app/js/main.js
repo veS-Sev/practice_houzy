@@ -91,5 +91,43 @@ $(function () {
     btnLogin.style.display = "block";
     btnStart.style.display = "block";
   });
+
+  //MODAL
+  let description = document.querySelectorAll('.description-btn'),
+  loginBtn = document.querySelector('.header__btn-login'),
+  login = document.getElementById('login'),
+  overlay = document.querySelector('.overlay'),
+  close = document.querySelectorAll('.popup-close');
+
+  console.log(close);
+// чтобы были доступны для обработчика событий все элементы собранные в description. Важно, чтобы после for не было ;.Потому, что description[i] будет underfined.
+for (let i = 0; i < description.length; i++)
+
+  description[i].addEventListener("click", function () {
+    overlay.style.display = 'block';
+    this.classList.add('more-splash');
+    console.log(this);
+    document.body.style.overflow = 'hidden';
+  });
+
+loginBtn.addEventListener('click', function () {
+  login.style.display = 'block';
+  this.classList.add('more-splash');
+  console.log(this);
+  document.body.style.overflow = 'hidden';
+ });
+for (let i = 0; i < close.length; i++)
+
+close[i].addEventListener('click', function () {
+    overlay.style.display = 'none';
+  for (let i = 0; i < description.length; i++) // не уверена, что нет лучшего решения, но пока оно мне не доступно. Речь про еще один цикл для description 
+  description[i].classList.remove('more-splash');
+
+  login.style.display = 'none';
+  login.classList.remove('more-splash');
+  console.log(this);
+  document.body.style.overflow = '';
+});
+// 
   
 });
