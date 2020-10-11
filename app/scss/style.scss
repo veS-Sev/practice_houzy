@@ -802,23 +802,18 @@
 // modal start
 #login {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: rgba($gray, 0.7);
   top: 0;
   max-width: 100vw;
   height: 100vh;
-  width: 1005;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-
-  // display:flex;
+  width: 100%;
 }
 .popup {
   position: absolute;
   background-color: #fff;
   top: 20%;
-  height: 40%;
+  min-height: 490px;
   max-width: 50%;
   width: 100%;
   left: 0;
@@ -835,29 +830,72 @@
 }
 .popup-title {
   font-family: "Poppins-Regular", sans-serif;
-  font-size: calc(100% + 20px);
-  line-height: calc(100% + 20px);
-  text-align: center;
+  font-size: calc(100% + 10px);
+   text-align: center;
 }
-.login__wrapper{
-  margin-top:50px;
+.login__wrapper {
+  margin-top: 50px;
 }
-.main-form{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
- }
-.creat-acc:hover,
-.creat-acc:focus,
-.lost-pass:hover,
-.lost-pass:focus{
-  box-shadow: 0 0 10px #a0a0a0;
+.main-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login__label-name-input {
+  height: 45px;
+  font-size: calc(100% + 2px);
+  color: #000;
+  padding: 5px 15px;
+  min-width:400px;
+  width:100%;
+  border: $gray solid 1px;
+
+}
+.login__label-pass-input{
+  @extend .login__label-name-input;
+  margin-top:30px;
+}
+.login__label-name-input::placeholder{
+  color: $gray;
 }
 .popup-form__btn{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 45px;
+  color:#fff;
+  border:none;
+  background-color:$blue;
+  max-width:400px;
+  width:100%;
   margin: 25px 0;
+}
+a.creat-acc{
+  margin-bottom:10px;
+}
+a.creat-acc:hover,
+a.creat-acc:focus,
+a.lost-pass:hover,
+a.lost-pass:focus {
+  color:$gray;
+ text-decoration-color: $gray;
 }
 .overlay {
   @extend #login;
+}
+.popup-form-header{
+  margin-top:25px;
+  margin-bottom: 25px;
+  color:$blue;
+  font-size:calc(100% + 4px);
+}
+.popup-form__label{
+  font-size:calc(100% + 2px);
+}
+.popup-form__input{
+  @extend .login__label-name-input;
+  margin-top:30px;
+  max-width: 400px;
 }
 .fade {
   z-index: 999;

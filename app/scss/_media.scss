@@ -279,6 +279,7 @@
       }
     }
   }
+
 }
 @media (max-width: 850px) {
   .banner__content-wrap {
@@ -307,6 +308,10 @@
       }
     }
   }
+  .popup{
+    max-width: 80%;
+  }
+
 }
 @media (max-width: 750px) {
   .service__tabs {
@@ -318,6 +323,7 @@
           left:-2px
     }
   }
+
 }
 @media (max-width: 650px) {
   body {
@@ -413,7 +419,11 @@
     }
   }
 }
-
+@media (max-width: 600px) {
+  .popup{
+    max-width: 95%;
+  }
+}
 @media (max-width: 500px) {
   .banner__content-wrap {
     background-color: rgba(#fff, 0.9);
@@ -468,6 +478,26 @@
     }
   }
 }
+@media (max-width: 450px) {
+  .popup{
+    max-width:100%;
+    border-radius:0;
+  }
+  .overlay{ 
+    .popup-title{
+      margin-top:25px;
+
+  }}
+   .login__label-name-input{
+    min-width: 300px;
+  }
+  .popup-form__input{
+    max-width:300px;
+  }
+  .popup-form__btn{
+    max-width: 300px;
+  }
+}
 @media (max-width: 400px) {
   .service__tabcontent-box {
     padding-left: 30px;
@@ -484,8 +514,4 @@
     }
   }
 }
-// @media (min-width: 901px) {
-//   .header__navigation-inner {
-//     display: grid !important;
-//   }
-// }
+

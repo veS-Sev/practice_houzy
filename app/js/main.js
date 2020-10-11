@@ -12,7 +12,7 @@ $(function () {
   // чтобы отображалась 4-я кнопка при небольшой ширине экрана
   if (document.documentElement.clientWidth < 1101) {
     tabHide.classList.remove('hide-tab','hide');
-  };
+  }
   // 
   function hideTabContent(a) {
     for (let i = a; i < tabContent.length; i++) {
@@ -81,7 +81,7 @@ $(function () {
         newNavItem.classList.add('header__navigation-item');
         mediaNav.appendChild(newNavItem);
       }
-    } else {};
+    } else {}
     let newLogin = document.querySelectorAll('.header__navigation-item')[3],
       newStart = document.querySelectorAll('.header__navigation-item')[4];
 
@@ -94,12 +94,12 @@ $(function () {
 
   //MODAL
   let description = document.querySelectorAll('.description-btn'),
-  loginBtn = document.querySelector('.header__btn-login'),
+  btnLogin = document.querySelector('.header__btn-login'),
   login = document.getElementById('login'),
   overlay = document.querySelector('.overlay'),
   close = document.querySelectorAll('.popup-close');
 
-  console.log(close);
+  console.log(btnLogin);
 // чтобы были доступны для обработчика событий все элементы собранные в description. Важно, чтобы после for не было ;.Потому, что description[i] будет underfined.
 for (let i = 0; i < description.length; i++)
 
@@ -110,7 +110,7 @@ for (let i = 0; i < description.length; i++)
     document.body.style.overflow = 'hidden';
   });
 
-loginBtn.addEventListener('click', function () {
+btnLogin.addEventListener('click', function () {
   login.style.display = 'block';
   this.classList.add('more-splash');
   console.log(this);
